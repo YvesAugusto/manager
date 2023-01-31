@@ -1,13 +1,14 @@
 from fastapi.responses import JSONResponse
 
 
-async def capture_success_wait_response(request_id: str):
+async def capture_success_wait_response(request_id: str, lectures: list[dict]):
     return JSONResponse(
         content={
             "message": "Captura em andamento",
             "data": {
-                "request_id": request_id
-            }, 
+                "request_id": request_id,
+                "lectures": lectures
+            },
             "error": False
         },
         status_code=200
