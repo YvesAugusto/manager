@@ -6,7 +6,6 @@ async def capture_success_wait_response(lectures: list[dict]):
         content={
             "message": "Captura em andamento",
             "data": lectures,
-            "error": False
         },
         status_code=200
     )
