@@ -41,7 +41,7 @@ async def capture_qrcode_route(camera_id: int = Path(ge=1)):
 
     logger_.info(f"[{request_id}] Lectures[drone_id = {camera_id}]: {lectures}")
 
-    return await capture_success_wait_response(request_id, lectures)
+    return await capture_success_wait_response(lectures)
 
 @router.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
